@@ -10,9 +10,8 @@ const app = express()
 
 express()
     .use(express.static(path.join(__dirname, 'client', 'build')))
-    .get('/', (req, res) => res.render('client/build/index'))
+    .get('/', (req, res) => res.render('index'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
 
 // app.use(bodyParser.urlencoded({extended: false}))
 // app.use(express.json({extended: true}));
@@ -33,19 +32,19 @@ express()
 //     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
 // })
 
-const start = async () => {
-    try {
-        await mongoose.connect(config.get('mongoURL'), {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
-        app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
-    } catch (e) {
-        console.log('Server Error', e.message)
-        process.exit(1)
-    }
-}
-
-start()
+// const start = async () => {
+//     try {
+//         await mongoose.connect(config.get('mongoURL'), {
+//             useNewUrlParser: true,
+//             useUnifiedTopology: true,
+//             useCreateIndex: true
+//         })
+//         app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
+//     } catch (e) {
+//         console.log('Server Error', e.message)
+//         process.exit(1)
+//     }
+// }
+//
+// start()
 
