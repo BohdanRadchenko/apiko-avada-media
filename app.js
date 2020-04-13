@@ -8,11 +8,11 @@ const PORT = process.env.PORT || config.get("port") || 5000
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send(`
-    <h1> hello world </h1>
-    `)
-})
+express()
+    .use(express.static(path.join(__dirname, 'client', 'build')))
+    .get('/', (req, res) => res.render('client/build/index'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
 
 // app.use(bodyParser.urlencoded({extended: false}))
 // app.use(express.json({extended: true}));
