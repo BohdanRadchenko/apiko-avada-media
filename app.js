@@ -8,10 +8,6 @@ const PORT = process.env.PORT || config.get("port") || 5000
 
 const app = express()
 
-app.get('/', () => {
-    console.log('work')
-})
-
 // app.use(bodyParser.urlencoded({extended: false}))
 // app.use(express.json({extended: true}));
 //
@@ -33,12 +29,12 @@ app.get('/', () => {
 
 const start = async () => {
     try {
-        await mongoose.connect(config.get('mongoURL'), {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
-        app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
+        // await mongoose.connect(config.get('mongoURL'), {
+        //     useNewUrlParser: true,
+        //     useUnifiedTopology: true,
+        //     useCreateIndex: true
+        // })
+        app.listen(PORT, () =>g console.log(`app hes been started on port ${PORT} ...`))
     } catch (e) {
         console.log('Server Error', e.message)
         process.exit(1)
