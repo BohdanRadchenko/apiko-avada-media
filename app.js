@@ -27,18 +27,27 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
 })
 
-const start = async () => {
-    try {
-        await mongoose.connect( process.env.MONGODB_URL || config.get('mongoURL'), {
+
+mongoose.connect( process.env.MONGODB_URL || config.get('mongoURL'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         })
-        app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
-    } catch (e) {
-        console.log('Server Error', e.message)
-        process.exit(1)
-    }
-}
 
-start()
+app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
+
+// const start = async () => {
+//     try {
+//         await mongoose.connect( process.env.MONGODB_URL || config.get('mongoURL'), {
+//             useNewUrlParser: true,
+//             useUnifiedTopology: true,
+//             useCreateIndex: true
+//         })
+//         app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
+//     } catch (e) {
+//         console.log('Server Error', e.message)
+//         process.exit(1)
+//     }
+// }
+//
+// start()
