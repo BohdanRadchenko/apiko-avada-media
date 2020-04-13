@@ -45,10 +45,10 @@ app.get("*", (req, res) => {
 //
 // start()
 
-app.listen(PORT, async (req, res) => {
-    await mongoose.connect(config.get('mongoURL'), {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
-    })
+mongoose.connect(config.get('mongoURL'), {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
 })
+g
+ app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
