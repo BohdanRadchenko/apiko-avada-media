@@ -32,7 +32,7 @@ const mongoConnect = async () => {
 
 app.use('/', express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {
-    mongoConnect().then(res.json({message : 'work'}))
+    mongoConnect()
     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
 })
 
