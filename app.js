@@ -30,17 +30,17 @@ app.get("*", (req, res) => {
 // app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 const start = async () => {
-    try {
+    // try {
         await mongoose.connect(config.get('mongoURL'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         })
         // app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
-    } catch (e) {
-        console.log('Server Error', e.message)
+    // } catch (e) {
+    //     console.log('Server Error', e.message)
         // process.exit(1)
-    }
+    // }
 }
 
 start()
