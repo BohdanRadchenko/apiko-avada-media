@@ -29,7 +29,7 @@ app.get("*", (req, res) => {
 
 const start = async () => {
     try {
-        await mongoose.connect(config.get('mongoURL'), {
+        await mongoose.connect( process.env.MONGODB_URL || config.get('mongoURL'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
@@ -41,4 +41,4 @@ const start = async () => {
     }
 }
 
-start().then(console.log('wotk'))
+start()
