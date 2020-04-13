@@ -1,0 +1,49 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.select {
+    width: 100%;
+    cursor: pointer;
+    background: #F9FAFB;
+    border: 1px solid #DEDEE0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 34px;
+    color: #505050;
+    appearance: none;
+    padding-left: 40px;
+}
+
+.label::before {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('../../../assets/icon/grid-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.label::after {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 10px;
+    background-image: url('../../../assets/icon/arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

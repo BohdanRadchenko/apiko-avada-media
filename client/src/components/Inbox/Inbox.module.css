@@ -1,0 +1,639 @@
+.container {
+    width: 100%;
+    min-height: calc(100vh - 62px);
+    display: flex;
+}
+/*LEFT SIDE*/
+.leftSide {
+    width: 40%;
+    padding: 20px 14px;
+    background-color: #fff;
+}
+
+.chatList {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.chatItem {
+    position: relative;
+    cursor: pointer;
+    padding: 30px 0;
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+    margin-bottom: 10px;
+}
+
+.chatItem:hover {
+    transform: scale(1.02);
+}
+
+.chatItem[target='active']::before {
+    content : '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 107px;
+    background: #349A89;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.chatItem[target='active']:hover {
+    transform: scale(1);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.messageInfoWrapper {
+    width: 87%;
+    display: flex;
+}
+
+.infoUser {
+    position: relative;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 4px;
+}
+
+.infoUser::after {
+    content: '';
+    display: block;
+    width: 36px;
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%) rotate(-90deg);
+    border: 1px solid #E7E9ED;
+}
+
+.userInfoName,
+.userInfoDesc {
+    margin: 0;
+    font-size: 15px;
+}
+
+.userInfoName {
+    margin-bottom: 4px;
+}
+
+.userInfoDesc {
+    position: relative;
+    padding-left: 16px;
+    color: rgba(43, 43, 43, 0.499918);
+}
+
+.userInfoDesc::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    background-image: url('../../assets/icon/inbox-icon-message.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.infoProduct {
+    padding-left: 10px;
+    position: relative;
+    width: 50%;
+    display: flex;
+}
+
+.infoProduct::after {
+    content: '';
+    display: block;
+    width: 36px;
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%) rotate(-90deg);
+    border: 1px solid #E7E9ED;
+}
+
+.productImage {
+    display: block;
+    width: 47px;
+    height: 47px;
+    background-image: url('../../assets/img/chat-image-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 8px;
+}
+
+.secondImage {
+    background-image: url('../../assets/img/chat-image-2.png');
+}
+
+.thirdImage {
+    background-image: url('../../assets/img/chat-image-3.png');
+}
+
+
+.productInfoTitle,
+.productInfoPrice {
+    margin: 0;
+    font-size: 15px;
+}
+
+.productInfoTitle {
+    margin-bottom: 4px;
+}
+
+.productInfoPrice {
+    font-weight: bold;
+}
+
+.messageTimeWrapper {
+    position: relative;
+    width: 13%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.messageTime {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    color: rgba(43, 43, 43, 0.499918);
+}
+
+/*RIGTH SIDE*/
+.rightSide {
+    position: relative;
+    width: 60%;
+    background: #F8F8F8;
+    border-left: 1px solid #E7E9ED;
+    min-height: calc(100vh - 62px);
+}
+
+.chatHeader {
+    position: relative;
+    width: 100%;
+    padding: 14px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E7E9ED;
+}
+
+.currentInfo {
+    display: flex;
+    padding-left: 16px;
+}
+
+.currentUser {
+    display: flex;
+    vertical-align: center;
+    margin-right: 64px;
+}
+
+.currentUserPhoto {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url('../../assets/img/chat-avatar.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto 0 ;
+    margin-right: 16px;
+}
+
+.currentUserNameWrapper {
+    display: block;
+    margin: auto 0;
+}
+
+.currentUserName {
+    display: inline-block;
+    font-size: 15px;
+    color: #131314;
+    text-align: center;
+}
+
+.currentProductInfo {
+    position: relative;
+    padding: 10px 14px;
+    padding-right: 60px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    display: flex;
+}
+
+.currentProductPhoto {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-image: url('../../assets/img/chat-image-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.currentProductDesc,
+.currentProductTitle,
+.currentProductPrice {
+    margin: 0;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.currentProductDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.currentProductTitle {
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.currentProductPrice {
+    font-weight: 600;
+}
+
+.currentProductButtonOpen {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../assets/icon/inbox-icon-open.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: .1s  ease-in-out;
+}
+
+.currentProductButtonOpen:hover {
+    width: 20px;
+    height: 20px;
+}
+
+.moreButton {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: block;
+    width: 4px;
+    height: 16px;
+}
+
+.buttonPointOne {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #97A3B4;
+    border-radius: 50%;
+}
+
+.buttonPointTwo {
+    composes: buttonPointOne;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonPointThree {
+    composes: buttonPointOne;
+    top: unset;
+    bottom: 0;
+}
+
+
+/*MESSAGE*/
+.messageList {
+    width: 100%;
+    list-style: none;
+    padding-top: 36px;
+    padding-left: 24px;
+    padding-right: 32px;
+}
+
+.messageItem {
+    margin-bottom: 50px;
+}
+
+.messageTextWrapper {
+    max-width: 40%;
+}
+
+/*--------------------------------------------*/
+.messageItem[message='me'] .messageTextWrapper {
+/*.messageTextWrapper {*/
+    position: relative;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #349A89;
+}
+
+.messageItem[message='me'] .messageTextWrapper::before{
+/*.messageTextWrapper::before {*/
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -5px;
+    width: 26px;
+    height: 20px;
+    background: #349A89;
+    transform: skew(30deg);
+}
+
+.messageItem[message='for'] {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.messageItem[message='for'] .messageTextWrapper {
+    min-width:40%;
+    position: relative;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.messageItem[message='for'] .messageTextWrapper::before{
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: -5px;
+    width: 26px;
+    height: 20px;
+    background: #fff;
+    transform: skew(-30deg);
+}
+/*------------------------------------------------------*/
+
+.messageText {
+    position: relative;
+    color: #FFFFFF;
+}
+
+.messageItem[message='for'] .messageText {
+    color: #131314;
+}
+
+.messageTextTime {
+    position: absolute;
+    right: 1px;
+    bottom: -20px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 13px;
+    color: #97A3B4;
+}
+
+.shareFile {
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+}
+
+.laptop {
+    width: 40px;
+    display: block;
+    background-image: url('../../assets/img/chat-laptop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 12px;
+}
+
+.laptopDesc {
+    margin: 16px 0;
+}
+
+.laptopDesc p {
+    margin: 0;
+    font-weight: bold;
+    line-height: 21px;
+    font-size: 13px;
+    color: #002257;
+}
+
+.laptopDesc p:last-child {
+    font-weight: normal;
+}
+
+/*TEXTAREA*/
+.textareaWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.textarea {
+    outline: none;
+    padding: 17px 20px;
+    width: 100%;
+    font-family: 'Helvetica';
+    border: 1px solid #E9EBF2;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 13px;
+    resize: none;
+}
+
+.textarea::placeholder {
+    color: #97A3B4;
+}
+
+.textareaWrapper::before {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background-image: url('../../assets/icon/inbox-icon-message-emoji-laugh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.textareaWrapper::after {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background-image: url('../../assets/icon/inbox-icon-message-shape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrowButtonBack {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .leftSide {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .leftSideFalse {
+        margin-left: -100%;
+        composes: leftSide;
+    }
+
+    .rightSide {
+        width: 100%;
+        transition: all .3s ease-in-out;
+    }
+
+    .rightSideFalse {
+        margin-left: 100%;
+        composes: rightSide;
+    }
+
+    /*LEFT SIDE*/
+    .chatItem[target='active']::before {
+        display: none;
+    }
+
+    .messageInfoWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infoUser,
+    .infoProduct {
+        width: 100%;
+    }
+
+    .infoUser {
+        margin-bottom: 20px;
+    }
+
+    .infoUser::after {
+        top: unset;
+        right: unset;
+        left: 0;
+        bottom: -10px;
+        transform: rotate(180deg) translateX(-50%);
+    }
+
+    .infoProduct::after {
+        display: none;
+    }
+
+    .messageTimeWrapper {
+        justify-content: flex-start;
+    }
+
+    /*RIGHT SIDE*/
+    
+    .chatHeader {
+        position: relative;
+    }
+
+    .arrowButtonBack {
+        display: block;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 26px;
+        left: 16px;
+        width: 12px;
+        height: 20px;
+        background-image: url('../../assets/icon/inbox-arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .currentInfo {
+        display: flex;
+        flex-direction: column;
+        padding-left: 28px;
+    }
+
+    .currentUser {
+        position: relative;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .currentUser::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E7E9ED;
+    }
+
+    .currentProductInfo {
+        padding-left: 0;
+        background-color: transparent;
+    }
+
+    .moreButton {
+        top: 42px;
+        transform: translateY(-100%);
+    }
+
+    .messageList {
+        padding-top: 0;
+    }
+
+    .messageItem[message='me'] .messageTextWrapper {
+        min-width: 60%;
+    }
+
+    .messageItem[message='for'] .messageTextWrapper {
+        min-width: 60%;
+        max-width: 81%;
+    }
+}
+

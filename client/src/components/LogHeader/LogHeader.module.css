@@ -1,0 +1,60 @@
+.container {
+    padding-top: 18px;
+    width: 82%;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('../../assets/img/logoBlue.png');
+    display: block;
+    width: 102px;
+    height: 42px;
+}
+
+.logoOrange {
+    composes: logo;
+    background-image: url('../../assets/img/logoOrange.png');
+}
+
+
+.navigations {
+    display: flex;
+}
+
+.button {
+    display: block;
+    width: 130px;
+    border: none;
+    background: #349A89;
+    border-radius: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 34px;
+    cursor: pointer;
+}
+
+.loginLink {
+    color: #2B2B2B;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.favorite {
+    background-image: url('../../assets/icon/heart-icon.png');
+    background-size: contain;
+    background-position: 0 center ;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 30px;
+}
+

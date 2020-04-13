@@ -1,0 +1,150 @@
+.backgroundWrapper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(180deg, #090810 0%, #171236 100%);
+}
+
+.container {
+    width: 82%;
+    margin: 0 auto;
+}
+
+.mainWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('../../assets/img/Logofull.png');
+    display: block;
+    width: 102px;
+    height: 42px;
+}
+
+.navigations {
+    display: flex;
+}
+
+.inbox {
+    display: block;
+    width: 18px;
+    height: 32px;
+    background-image: url('../../assets/icon/inbox.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-size: contain;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.inboxOn {
+    position: relative;
+    composes: inbox;
+}
+
+.inboxOn::after {
+    content: ' ';
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    transform: translateX(50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #EB3535;
+    border-radius: 50%;
+    background-color: #EB3535;
+}
+
+
+.button {
+    display: block;
+    width: 130px;
+    border: none;
+    background: #349A89;
+    border-radius: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 34px;
+    cursor: pointer;
+}
+
+.loginLink {
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.favorite {
+    background-image: url('../../assets/icon/heart-outline.png');
+    background-size: contain;
+    background-position: 0 center ;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 30px;
+}
+
+.favoriteCheked {
+    composes: favorite;
+    background-image: url('../../assets/icon/heart-outline-fill.png');
+}
+
+.burgerButtonWrapper {
+    width: 22px;
+    height: 16px;
+    display: none;
+}
+
+.burgerButton {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.burgerButtonLineOne {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.burgerButtonLineTwo {
+    composes: burgerButtonLineOne;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burgerButtonLineThree {
+    composes: burgerButtonLineOne;
+    top: unset;
+    bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 28px;
+    }
+
+    .navigations {
+        display: none;
+    }
+    
+    .burgerButtonWrapper {
+        display: block;
+    }
+}
+

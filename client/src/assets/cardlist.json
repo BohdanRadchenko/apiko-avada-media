@@ -1,0 +1,14 @@
+[
+  {"id":1,"name":"Item name", "price": 575.09 ,"img":"../../../assets/photo/Mask_1.png"},
+  {"id":2,"name":"Item name", "price": 518.54 ,"img":"../../../assets/photo/Mask_2.png"},
+  {"id":3,"name":"Item name", "price": 185.3 ,"img":"../../../assets/photo/Mask_3.png"},
+  {"id":4,"name":"Item name", "price": 984.05 ,"img":"../../../assets/photo/Mask_4.png"},
+  {"id":5,"name":"Item name", "price": 263.08 ,"img":"../../../assets/photo/Mask_5.png"},
+  {"id":6,"name":"Item name", "price": 682.29 ,"img":"../../../assets/photo/Mask_6.png"},
+  {"id":7,"name":"Item name", "price": 190.67 ,"img":"../../../assets/photo/Mask_7.png"},
+  {"id":8,"name":"Item name", "price": 275.05 ,"img":"../../../assets/photo/Mask_8.png"},
+  {"id":9,"name":"Item name", "price": 155.54 ,"img":"../../../assets/photo/Mask_9.png"},
+  {"id":10,"name":"Item name", "price": 677.22 ,"img":"../../../assets/photo/Mask_10.png"},
+  {"id":11,"name":"Item name", "price": 219.43 ,"img":"../../../assets/photo/Mask_11.png"},
+  {"id":12,"name":"Item name", "price": 346.96 ,"img":"../../../assets/photo/Mask_12.png"}
+]

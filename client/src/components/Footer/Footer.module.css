@@ -1,0 +1,13 @@
+.container {
+    display: block;
+    width: 100%;
+    background: rgba(192, 196, 206, 0.127321);
+}
+
+.container p {
+    margin: 0;
+    text-align: center;
+    color: #C0C4CE;
+    font-size: 14px;
+    line-height: 70px;
+}

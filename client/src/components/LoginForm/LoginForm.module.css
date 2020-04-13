@@ -1,0 +1,131 @@
+.container {
+    padding-top: 78px;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 130px);
+}
+
+.wrapper {
+    min-width: 425px;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*FORM*/
+.form {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 42px rgba(0, 0, 0, 0.111233);
+    border-radius: 7px;
+    padding: 24px;
+    margin-bottom: 22px;
+}
+
+.title {
+    color: #282828;
+    text-align: center;
+    margin: 0;
+}
+
+.passwordInner {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+/*INPUT */
+.label {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.input {
+    background: #F9FAFB;
+    width: 100%;
+    display: block;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 14px;
+    margin-bottom: 16px;
+}
+
+.input::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+    color: rgba(102, 102, 102, 0.466455);
+}
+
+/*BUTTON*/
+.showPassword {
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url('../../assets/icon/view-eye-seen-show-vision.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 center;
+    width: 24px;
+    height: 40px;
+    top: 30%;
+    right: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.resetPassword {
+    position: absolute;
+
+    bottom: -16px;
+    right: 0;
+    font-size: 12px;
+    color: #8C8C8C;
+    text-decoration: none;
+}
+
+.submitBtn {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #349A89;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 18px 0;
+}
+
+
+/*CONTEXT*/
+.regWrapper {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 42px rgba(0, 0, 0, 0.111233);
+    border-radius: 7px;
+}
+
+.textWrapper {
+    display: flex;
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2A2A2A;
+}
+
+ .textWrapper p {
+     margin: 0;
+     margin-right: 4px;
+ }
+
+ .registerLink {
+     color: #349A89;
+     text-decoration: none;
+ }

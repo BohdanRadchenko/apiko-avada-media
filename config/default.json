@@ -1,0 +1,5 @@
+{
+  "port" : 5000,
+  "mongoURL" : "mongodb+srv://bohdan:147258369@clusterone-gl6kf.gcp.mongodb.net/app?retryWrites=true&w=majority",
+  "jwtSecret" : "apika secret jwt code"
+}
