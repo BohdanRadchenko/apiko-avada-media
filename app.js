@@ -1,7 +1,7 @@
-const config = require('config')
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
+const config = require('config')
 const bodyParser = require("body-parser")
 
 const PORT = process.env.PORT || config.get("port") || 5000
@@ -29,26 +29,20 @@ app.get("*", (req, res) => {
 
 // app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
-// const start = async () => {
-//     try {
-//         await mongoose.connect(config.get('mongoURL'), {
-//             useNewUrlParser: true,
-//             useUnifiedTopology: true,
-//             useCreateIndex: true
-//         })
-//         app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
-//     } catch (e) {
-//         console.log('Server Error', e.message)
-//         process.exit(1)
-//     }
-// }
-//
-// start()
+const start = async () => {
+    try {
+        await mongoose.connect(config.get('mongoURL'), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        })
+        // app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
+    } catch (e) {
+        console.log('Server Error', e.message)
+        // process.exit(1)
+    }
+}
 
-mongoose.connect(config.get('mongoURL'), {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-})
+start()
 
  app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
