@@ -8,10 +8,13 @@ const PORT = process.env.PORT || config.get("port") || 5000
 
 const app = express()
 
-express()
-    .use(express.static(path.join(__dirname, 'client', 'build')))
-    .get('/', (req, res) => res.render('index'))
+// express()
+    // .use(express.static(path.join(__dirname, 'client', 'build')))
+    // .get('/', (req, res) => res.render('index'))
     // .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+app.use(express.static(path.join(__dirname, 'client', 'build')))
+app.get('/', (req, res) => res.render('index'))
 
 // app.use(bodyParser.urlencoded({extended: false}))
 // app.use(express.json({extended: true}));
@@ -33,18 +36,17 @@ express()
 // })
 
 const start = async () => {
-//     try {
+    try {
         await mongoose.connect(config.get('mongoURL'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         })
         app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
-//     } catch (e) {
-//         console.log('Server Error', e.message)
-//         process.exit(1)
-//     }
+    } catch (e) {
+        console.log('Server Error', e.message)
+        process.exit(1)
+    }
 }
 
 start()
-
