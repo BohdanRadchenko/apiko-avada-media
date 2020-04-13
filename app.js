@@ -50,5 +50,5 @@ mongoose.connect(config.get('mongoURL'), {
     useUnifiedTopology: true,
     useCreateIndex: true
 })
-g
+
  app.listen(PORT, () => console.log(`app hes been started on port ${PORT} ...`))
